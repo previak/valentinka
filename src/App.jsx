@@ -75,7 +75,8 @@ function App() {
 
         const animate = () => {
             const maxX = window.innerWidth - btn.offsetWidth;
-            const maxY = window.innerHeight - btn.offsetHeight;
+            const viewportHeight = document.documentElement.clientHeight;
+            const maxY = viewportHeight - btn.offsetHeight;
 
             if (!hasInteracted.current) {
                 idleTick.current += 1;
@@ -91,6 +92,7 @@ function App() {
 
             let x = btn.offsetLeft + velocity.current.x;
             let y = btn.offsetTop + velocity.current.y;
+            y = Math.max(0, Math.min(y, maxY));
 
             const bounce = 0.98;
 
@@ -151,15 +153,15 @@ function App() {
                         Да
                     </button>
 
-                    <button
-                        className="no"
-                        ref={noBtnRef}
-                        onClick={(e) => e.preventDefault()}
-                    >
-                        Нет
-                    </button>
                 </div>
             </div>
+            <button
+                className="no"
+                ref={noBtnRef}
+                onClick={(e) => e.preventDefault()}
+            >
+                Нет
+            </button>
         </div>
 
     );

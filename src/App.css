@@ -6,11 +6,13 @@
   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+html,
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+  touch-action: none;
+  background: #825eff;
 }
 
 .scene {
@@ -56,12 +58,12 @@ body {
   padding: 32px 24px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
 }
 
 .container h1 {
   font-size: 28px;
-  color: #e63946;
+  color: #e700ff;
   margin-bottom: 28px;
 }
 
@@ -81,7 +83,7 @@ button {
 }
 
 button.yes {
-  background: #e63946;
+  background: #dd00ff;
   color: white;
   box-shadow: 0 10px 20px rgba(230, 57, 70, 0.4);
 }
@@ -95,6 +97,7 @@ button.no {
   background: #adb5bd;
   color: #333;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  z-index: 20;
 }
 
 @keyframes float {
@@ -118,7 +121,6 @@ button.no {
 @media (max-width: 768px) {
   .decor {
     width: 100px;
-    opacity: 0.45;
   }
 
   .decor-1 {
@@ -135,7 +137,7 @@ button.no {
 
   .decor-3 {
     bottom: 20%;
-    left: 50%;
+    left: 10%;
     transform: translateX(-50%) rotate(-5deg);
   }
 
