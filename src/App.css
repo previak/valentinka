@@ -120,23 +120,23 @@ button.no {
 
 @media (max-width: 768px) {
   .decor {
-    width: 100px;
+    width: 150px;
   }
 
   .decor-1 {
-    top: 1%;
-    left: 1%;
+    top: 3%;
+    left: 4%;
     transform: rotate(-10deg);
   }
 
   .decor-2 {
-    top: 1%;
-    right: 1%;
+    top: 5%;
+    right: 4%;
     transform: rotate(12deg);
   }
 
   .decor-3 {
-    bottom: 20%;
+    bottom: 5%;
     left: 10%;
     transform: translateX(-50%) rotate(-5deg);
   }
