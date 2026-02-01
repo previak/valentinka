@@ -1,7 +1,18 @@
 * {
   box-sizing: border-box;
+}
+
+body {
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
+@media (max-width: 768px) {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
 
 body {
   margin: 0;
@@ -55,5 +66,31 @@ button:hover {
   position: absolute;
   background-color: #ccc;
   color: #333;
+}
+
+
+.decor {
+  position: absolute;
+  width: 300px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.decor-1 {
+  top: 10%;
+  left: 15%;
+  transform: rotate(-15deg);
+}
+
+.decor-2 {
+  bottom: 12%;
+  right: 18%;
+  transform: rotate(20deg);
+}
+
+.decor-3 {
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%) rotate(-5deg);
 }
 
